@@ -30,10 +30,16 @@ endif()
 
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
-find_package(OpenCV 4.4)
-   if(NOT OpenCV_FOUND)
-      message(FATAL_ERROR "OpenCV > 4.4 not found.")
-   endif()
+#find_package(OpenCV 4.4)
+#   if(NOT OpenCV_FOUND)
+#      message(FATAL_ERROR "OpenCV > 4.4 not found.")
+#   endif()
+# OpenCV
+find_package(OpenCV 3.4.3)
+  if(NOT OpenCV_FOUND)
+    message(FATAL_ERROR "OpenCV = 3.4.3 not found")
+  endif()
+message(STATUS "Use OpenCV ${OpenCV_VERSION}")
 
 MESSAGE("OPENCV VERSION:")
 MESSAGE(${OpenCV_VERSION})

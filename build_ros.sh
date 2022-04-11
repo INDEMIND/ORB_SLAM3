@@ -1,5 +1,5 @@
 echo "Building ROS nodes"
-
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/lifei/sdk/ORB_SLAM3/Examples/ROS
 cd Examples/ROS/ORB_SLAM3
 mkdir build
 cd build
